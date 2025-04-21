@@ -4,10 +4,13 @@
 // Task 01
 // По нажатию кнопки запускается функция, которая создает пустой set и возвращает его. 
 
-const t01 = () => {}
+const t01 = () => {
+  const justSet = new Set();
+  return justSet
+}
 
 document.querySelector('.b-1').addEventListener('click', () => {
-    console.log(t01());
+  console.log(t01());
 });
 
 
@@ -16,7 +19,11 @@ document.querySelector('.b-1').addEventListener('click', () => {
 
 const st_02 = new Set();
 
-const t02 = () => {}
+const t02 = () => {
+  const i2 = document.querySelector('input.i-2');
+  st_02.add(i2.value);
+  console.log(st_02);
+}
 
 document.querySelector('.b-2').addEventListener('click', t02);
 
@@ -27,7 +34,18 @@ document.querySelector('.b-2').addEventListener('click', t02);
 
 const st_03 = new Set(['Wade', 'James', 'Ogden', 'Daito']);
 
-const t03 = () => {}
+const t03 = () => {
+  // const i3 = document.querySelector('input.i-3');
+  // const out3 = document.querySelector('.out-3');
+  // const stArr = [...st_03];
+  // const result = stArr.includes(i3.value);
+  // out3.textContent = result;
+  //или
+  const i3 = document.querySelector('input.i-3');
+  const out3 = document.querySelector('.out-3');
+  const result2 = st_03.has(i3.value);
+  out3.textContent = result2;
+}
 
 document.querySelector('.b-3').addEventListener('click', t03);
 
@@ -37,7 +55,7 @@ document.querySelector('.b-3').addEventListener('click', t03);
 
 const st_04 = new Set(['Samantha', 'Wade', 'Daito', 'Sho']);
 
-const t04 = () => {}
+const t04 = () => { }
 
 document.querySelector('.b-4').addEventListener('click', t04);
 
@@ -48,7 +66,7 @@ document.querySelector('.b-4').addEventListener('click', t04);
 
 const st_05 = new Set(['Atari 2600', 'Atari 5200', 'Atari 7800', 'Atari ST']);
 
-const t05 = () => {}
+const t05 = () => { }
 
 document.querySelector('.b-5').addEventListener('click', t05);
 
@@ -60,7 +78,7 @@ document.querySelector('.b-5').addEventListener('click', t05);
 let st_06 = new Set();
 st_06.add([1, 2, 3]);
 
-const t06 = () => {}
+const t06 = () => { }
 
 document.querySelector('.b-6').addEventListener('click', t06);
 
@@ -72,7 +90,7 @@ let st_07 = new Set();
 st_07.add([1, 2, 3]);
 st_07.add([4, 5, 6]);
 
-const t07 = () => {}
+const t07 = () => { }
 
 document.querySelector('.b-7').addEventListener('click', t07);
 
@@ -82,7 +100,7 @@ document.querySelector('.b-7').addEventListener('click', t07);
 
 let st_08 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t08 = () => {}
+const t08 = () => { }
 
 document.querySelector('.b-8').addEventListener('click', t08);
 
@@ -92,7 +110,7 @@ document.querySelector('.b-8').addEventListener('click', t08);
 
 let st_09 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t09 = () => {}
+const t09 = () => { }
 
 document.querySelector('.b-9').addEventListener('click', t09);
 
@@ -103,10 +121,10 @@ document.querySelector('.b-9').addEventListener('click', t09);
 
 let st_10 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t10 = () => {}
+const t10 = () => { }
 
 document.querySelector('.b-10').addEventListener('click', () => {
-    document.querySelector('.out-10').textContent = [...t10()].join(' ');
+  document.querySelector('.out-10').textContent = [...t10()].join(' ');
 });
 
 
@@ -116,37 +134,37 @@ document.querySelector('.b-10').addEventListener('click', () => {
 let a = new Set([111, 222, 333, 444]);
 let b = new Set([777, 555, 333, 444]);
 
-const t11 = () => {}
+const t11 = () => { }
 
 document.querySelector('.b-11').addEventListener('click', () => {
-    console.log(t11());
+  console.log(t11());
 });
 
 // Task 12
 // Напишите функцию, которая делает difference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t12 = () => {}
+const t12 = () => { }
 
 document.querySelector('.b-12').addEventListener('click', () => {
-    console.log(t12());
+  console.log(t12());
 });
 
 // Task 13
 // Напишите функцию, которая делает intersection наборов a с набором b. Функция должна возвращать созданный set.
 
-const t13 = () => {}
+const t13 = () => { }
 
 document.querySelector('.b-13').addEventListener('click', () => {
-    console.log(t13());
+  console.log(t13());
 });
 
 // Task 14
 // Напишите функцию, которая делает symmetricDifference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t14 = () => {}
+const t14 = () => { }
 
 document.querySelector('.b-14').addEventListener('click', () => {
-    console.log(t14());
+  console.log(t14());
 });
 
 // Task 15
@@ -154,10 +172,10 @@ document.querySelector('.b-14').addEventListener('click', () => {
 
 let st_15 = new Set([1, 2, -4, 5, 10, 3, 12, 14, 15, 7, 7]);
 
-const t15 = () => {}
+const t15 = () => { }
 
 document.querySelector('.b-15').addEventListener('click', () => {
-    console.log(t15());
+  console.log(t15());
 });
 
 // Task 16
@@ -167,10 +185,10 @@ document.querySelector('.b-15').addEventListener('click', () => {
 
 let pass_16 = 'Кром строг, силен и вечен';
 
-const t16 = () => {}
+const t16 = () => { }
 
 document.querySelector('.b-16').addEventListener('click', () => {
-    console.log(t16());
+  console.log(t16());
 });
 
 // Task 17
@@ -181,10 +199,10 @@ let farr_17 = [1, 2, 3, 4];
 let barr_17 = [9, 8, 7, 2, 1];
 
 
-const t17 = () => {}
+const t17 = () => { }
 
 document.querySelector('.b-17').addEventListener('click', () => {
-    document.querySelector('.out-17').textContent = t17().join(' ');
+  document.querySelector('.out-17').textContent = t17().join(' ');
 });
 
 
@@ -196,10 +214,10 @@ let farr_18 = [1, 2, 3, 4];
 let barr_18 = [9, 8, 7, 2, 1];
 
 
-const t18 = () => {}
+const t18 = () => { }
 
 document.querySelector('.b-18').addEventListener('click', () => {
-    document.querySelector('.out-18').textContent = t18().join(' ');
+  document.querySelector('.out-18').textContent = t18().join(' ');
 });
 
 
@@ -212,10 +230,10 @@ let farr_19 = [1, 2, 3, 4];
 let barr_19 = [9, 8, 7, 2, 1];
 
 
-const t19 = () => {}
+const t19 = () => { }
 
 document.querySelector('.b-19').addEventListener('click', () => {
-    document.querySelector('.out-19').textContent = t19().join(' ');
+  document.querySelector('.out-19').textContent = t19().join(' ');
 });
 
 
@@ -226,8 +244,8 @@ let farr_20 = [1, 2];
 let barr_20 = [9, 8, 7, 2, 1];
 
 
-const t20 = () => {}
+const t20 = () => { }
 
 document.querySelector('.b-20').addEventListener('click', () => {
-    document.querySelector('.out-20').textContent = t20();
+  document.querySelector('.out-20').textContent = t20();
 });
