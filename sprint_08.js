@@ -55,7 +55,18 @@ document.querySelector('.b-3').addEventListener('click', t03);
 
 const st_04 = new Set(['Samantha', 'Wade', 'Daito', 'Sho']);
 
-const t04 = () => { }
+const t04 = () => {
+  const s4 = document.querySelector('.s-4');
+  const out4 = document.querySelector('.out-4');
+  if (st_04.has(s4.value)) {
+    st_04.delete(s4.value);
+    out4.textContent = s4.value;
+  }
+  else {
+    out4.textContent = 'не обнаружено';
+  }
+  console.log(st_04);
+}
 
 document.querySelector('.b-4').addEventListener('click', t04);
 
@@ -66,7 +77,10 @@ document.querySelector('.b-4').addEventListener('click', t04);
 
 const st_05 = new Set(['Atari 2600', 'Atari 5200', 'Atari 7800', 'Atari ST']);
 
-const t05 = () => { }
+const t05 = () => {
+  st_05.clear();
+  console.log(st_05);
+}
 
 document.querySelector('.b-5').addEventListener('click', t05);
 
@@ -78,7 +92,11 @@ document.querySelector('.b-5').addEventListener('click', t05);
 let st_06 = new Set();
 st_06.add([1, 2, 3]);
 
-const t06 = () => { }
+const t06 = () => {
+  const arr = [...st_06];
+  console.log(arr);
+
+}
 
 document.querySelector('.b-6').addEventListener('click', t06);
 
@@ -90,7 +108,19 @@ let st_07 = new Set();
 st_07.add([1, 2, 3]);
 st_07.add([4, 5, 6]);
 
-const t07 = () => { }
+
+const t07 = () => {
+  const newSet = new Set();
+
+  for (let item of st_07) {
+    for (let num of item) {
+      newSet.add(num);
+    }
+  }
+
+  st_07 = newSet;
+  console.log(st_07);
+}
 
 document.querySelector('.b-7').addEventListener('click', t07);
 
@@ -100,7 +130,11 @@ document.querySelector('.b-7').addEventListener('click', t07);
 
 let st_08 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t08 = () => { }
+const t08 = () => {
+  const out8 = document.querySelector('.out-8');
+  const arr = [...st_08];
+  out8.textContent = arr.reverse();
+}
 
 document.querySelector('.b-8').addEventListener('click', t08);
 
