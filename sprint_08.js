@@ -144,7 +144,16 @@ document.querySelector('.b-8').addEventListener('click', t08);
 
 let st_09 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t09 = () => { }
+const t09 = () => {
+  const out9 = document.querySelector('.out-9');
+  let result = [];
+  st_09.forEach((item) => {
+    if (item % 2 === 0) {
+      result += item + ' ';
+    }
+  })
+  out9.textContent = result;
+}
 
 document.querySelector('.b-9').addEventListener('click', t09);
 
@@ -155,7 +164,15 @@ document.querySelector('.b-9').addEventListener('click', t09);
 
 let st_10 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t10 = () => { }
+const t10 = () => {
+  let newSet = new Set();
+  st_10.forEach((item) => {
+    if (item % 2 !== 0) {
+      newSet.add(item);
+    }
+  })
+  return newSet;
+}
 
 document.querySelector('.b-10').addEventListener('click', () => {
   document.querySelector('.out-10').textContent = [...t10()].join(' ');
@@ -168,7 +185,10 @@ document.querySelector('.b-10').addEventListener('click', () => {
 let a = new Set([111, 222, 333, 444]);
 let b = new Set([777, 555, 333, 444]);
 
-const t11 = () => { }
+const t11 = () => {
+  const unionSet = a.union(b);
+  return unionSet;
+}
 
 document.querySelector('.b-11').addEventListener('click', () => {
   console.log(t11());
@@ -177,7 +197,10 @@ document.querySelector('.b-11').addEventListener('click', () => {
 // Task 12
 // Напишите функцию, которая делает difference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t12 = () => { }
+const t12 = () => {
+  const differenceSet = a.difference(b);
+  return differenceSet;
+}
 
 document.querySelector('.b-12').addEventListener('click', () => {
   console.log(t12());
@@ -186,7 +209,10 @@ document.querySelector('.b-12').addEventListener('click', () => {
 // Task 13
 // Напишите функцию, которая делает intersection наборов a с набором b. Функция должна возвращать созданный set.
 
-const t13 = () => { }
+const t13 = () => {
+  const intersectionSet = a.intersection(b);
+  return intersectionSet;
+}
 
 document.querySelector('.b-13').addEventListener('click', () => {
   console.log(t13());
@@ -195,7 +221,10 @@ document.querySelector('.b-13').addEventListener('click', () => {
 // Task 14
 // Напишите функцию, которая делает symmetricDifference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t14 = () => { }
+const t14 = () => {
+  const symmetricDifferenceSet = a.symmetricDifference(b);
+  return symmetricDifferenceSet;
+}
 
 document.querySelector('.b-14').addEventListener('click', () => {
   console.log(t14());
@@ -206,7 +235,14 @@ document.querySelector('.b-14').addEventListener('click', () => {
 
 let st_15 = new Set([1, 2, -4, 5, 10, 3, 12, 14, 15, 7, 7]);
 
-const t15 = () => { }
+const t15 = () => {
+  st_15.forEach((item) => {
+    if (item > 10) {
+      st_15.delete(item);
+    }
+  })
+  return st_15;
+}
 
 document.querySelector('.b-15').addEventListener('click', () => {
   console.log(t15());
@@ -215,11 +251,12 @@ document.querySelector('.b-15').addEventListener('click', () => {
 // Task 16
 // Напишите функцию, которая берет пароль pass_16 и возвращает true, если в рамках строки пароля символы уникальные (не повторяются) и false в обратном случае.
 
-
-
 let pass_16 = 'Кром строг, силен и вечен';
 
-const t16 = () => { }
+const t16 = () => {
+  const passSet = new Set(pass_16);
+  return pass_16.length === passSet.size;
+}
 
 document.querySelector('.b-16').addEventListener('click', () => {
   console.log(t16());
@@ -233,7 +270,14 @@ let farr_17 = [1, 2, 3, 4];
 let barr_17 = [9, 8, 7, 2, 1];
 
 
-const t17 = () => { }
+const t17 = () => {
+
+  const s1 = new Set(farr_17);
+  const s2 = new Set(barr_17);
+  const arr = s1.intersection(s2);
+  const result = [...arr];
+  return result;
+}
 
 document.querySelector('.b-17').addEventListener('click', () => {
   document.querySelector('.out-17').textContent = t17().join(' ');
@@ -248,7 +292,13 @@ let farr_18 = [1, 2, 3, 4];
 let barr_18 = [9, 8, 7, 2, 1];
 
 
-const t18 = () => { }
+const t18 = () => {
+  const s1 = new Set(farr_18);
+  const s2 = new Set(barr_18);
+  const arr = s1.difference(s2);
+  const result = [...arr];
+  return result;
+}
 
 document.querySelector('.b-18').addEventListener('click', () => {
   document.querySelector('.out-18').textContent = t18().join(' ');
@@ -264,7 +314,13 @@ let farr_19 = [1, 2, 3, 4];
 let barr_19 = [9, 8, 7, 2, 1];
 
 
-const t19 = () => { }
+const t19 = () => {
+  const s1 = new Set(farr_19);
+  const s2 = new Set(barr_19);
+  const arr = s1.symmetricDifference(s2);
+  const result = [...arr];
+  return result;
+}
 
 document.querySelector('.b-19').addEventListener('click', () => {
   document.querySelector('.out-19').textContent = t19().join(' ');
@@ -278,7 +334,17 @@ let farr_20 = [1, 2];
 let barr_20 = [9, 8, 7, 2, 1];
 
 
-const t20 = () => { }
+const t20 = () => {
+  const setB = new Set(barr_20);
+
+  for (let item of farr_20) {
+    if (!setB.has(item)) {
+      return false;
+    }
+  }
+
+  return true;
+}
 
 document.querySelector('.b-20').addEventListener('click', () => {
   document.querySelector('.out-20').textContent = t20();
